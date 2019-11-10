@@ -24,6 +24,7 @@
 	width: 40%;
 }
 
-.output {
-	text-align: center;
+.result-list {
+	list-style-type: decimal;
 }
+

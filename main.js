@@ -3,7 +3,8 @@
         stringButton = document.querySelector('#string_filter'),
         check = document.querySelector('#chb');
   const val = document.querySelector('#text_input');
-  const resultWords = document.querySelector('#result');
+  const resultWords = document.querySelector('#result'),
+        list = document.querySelector('.result-list');
   const allWords = [];
 
   const proxyURL = "https://cors-anywhere.herokuapp.com/";
@@ -45,6 +46,14 @@
 
   function resetResultWords() {
     resultWords.innerHTML = '';
+    list.innerHTML = '';
+  }
+
+  function addToResultWords(word) {
+    let listItem = document.createElement('li');
+    list.appendChild(listItem);
+    listItem.innerHTML = word;
+    resultWords.appendChild(list);
   }
 
   //
@@ -53,15 +62,17 @@
 
   quantityButton.addEventListener('click', function() {
     resetResultWords();
-    let quantity = val.value;
-    // console.log(quantity);
+    const quantity = val.value;
+    console.log(quantity);
     for (let word of allWords) {
       if (word.length >= quantity) {
-        let p = document.createElement('p');
-        p.innerHTML = word;
-        resultWords.appendChild(p);
+        // let p = document.createElement('p');
+        // p.innerHTML = word;
+        // resultWords.appendChild(p);
+        addToResultWords(word);
       }
     }
+
 
   })
 
@@ -72,18 +83,20 @@
     for (let word of allWords) {
       if (word.includes(v)) {
         // console.log(word);
-        let p = document.createElement('p');
-        p.innerHTML = word;
-        resultWords.appendChild(p);
+        // let p = document.createElement('p');
+        // p.innerHTML = word;
+        // resultWords.appendChild(p);
+        addToResultWords(word);
       }
     }
     } else {
     for (let word of allWords) {
       if (word.toLowerCase().includes(v.toLowerCase())) {
         // console.log(word);
-        let p = document.createElement('p');
-        p.innerHTML = word;
-        resultWords.appendChild(p);
+        // let p = document.createElement('p');
+        // p.innerHTML = word;
+        // resultWords.appendChild(p);
+        addToResultWords(word);
       }
     }
    }
