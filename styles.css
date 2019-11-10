@@ -1,0 +1,29 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	margin: 10% auto;
+	width: 50vw;
+}
+
+.main-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.chbox {
+	margin: 2% 0 5% 0;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.btn {
+	width: 40%;
+}
+
+.output {
+	text-align: center;
+}

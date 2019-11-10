@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+    		<title>tt_2</title>
+		<link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="content">
+		<form id="main_form" class="main-form">
+			<input id="text_input" class="text-input" type="text" value="" autofocus="true">
+			<p><input id="chb" class="chbox" type="checkbox" onclick="handleCheckbox()">case-sensitive</p>
+				<div class="buttons">
+					<input id="quantity_filter" class="quantity-btn btn" type="button" value="filter by char number">
+					<input id="string_filter" class="string-btn btn" type="button" value="filter by string">
+				</div>
+		</form>
+		
+		<div id="result" class="output"></div>
+
+		</div>
+		
+		<script type='text/javascript' src="main.js"></script>
+	</body>
+
+</html>
