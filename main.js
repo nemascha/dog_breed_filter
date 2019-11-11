@@ -63,12 +63,9 @@
   quantityButton.addEventListener('click', function() {
     resetResultWords();
     const quantity = val.value;
-    console.log(quantity);
+    // console.log(quantity);
     for (let word of allWords) {
       if (word.length >= quantity) {
-        // let p = document.createElement('p');
-        // p.innerHTML = word;
-        // resultWords.appendChild(p);
         addToResultWords(word);
       }
     }
@@ -83,9 +80,6 @@
     for (let word of allWords) {
       if (word.includes(v)) {
         // console.log(word);
-        // let p = document.createElement('p');
-        // p.innerHTML = word;
-        // resultWords.appendChild(p);
         addToResultWords(word);
       }
     }
@@ -93,9 +87,6 @@
     for (let word of allWords) {
       if (word.toLowerCase().includes(v.toLowerCase())) {
         // console.log(word);
-        // let p = document.createElement('p');
-        // p.innerHTML = word;
-        // resultWords.appendChild(p);
         addToResultWords(word);
       }
     }
